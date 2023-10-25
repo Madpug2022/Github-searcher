@@ -2,6 +2,8 @@ import { useLocation } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import fetchData from '../api/fetchData';
 import { FiGithub } from "react-icons/fi";
+import FilterBar from '../components/FilterBar';
+import Repositories from '../components/Repositories';
 
 interface User {
     login: string;
@@ -28,6 +30,7 @@ interface Repository {
 
 const ResultPage = () => {
     const [searchResults, setSearchResults] = useState<User | null>(null);
+    const [filter, setFilter] = useState<string>('');
     const location = useLocation();
     const searchQuery: string = location.state.name;
 
@@ -68,7 +71,7 @@ const ResultPage = () => {
                 <img src={searchResults?.avatarUrl} alt='User Logo'
                     className='xl:w-[250px] md:w-1/2 w-1/2 rounded-full m-1 border-4 border-slate-900' />
                 <p
-                    className='text-[#dfd9ff] font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px]'
+                    className='text-[#dfd9ff] font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px] '
                 >{searchResults?.login}</p>
                 <p
                     className='text-[#f1f1f1] font-medium lg:text-[18px] sm:text-[14px] xs:text-[10px] text-[12px] lg:leading-[30px]'
@@ -95,8 +98,9 @@ const ResultPage = () => {
 
             </div>
             <div
-                className='col-span-3'>
-                2
+                className='col-span-3 p-3 '>
+                <FilterBar setFilter={setFilter} />
+                <Repositories filter={filter} repositories={searchResults?.repositories.nodes} />
             </div>
         </section>
     )
