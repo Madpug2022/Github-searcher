@@ -17,8 +17,8 @@ const RepositoryCard = (props: PropType) => {
                     className="text-[white] font-semibold drop-shadow-md font-medium lg:text-[25px] sm:text-[18px] xs:text-[14px] text-[16px] lg:leading-[35px]"
                 >{name}</h2>
                 {description ? <p
-                    className="text-[#adadc9] drop-shadow-md font-medium lg:text-[16px] sm:text-[18px] xs:text-[14px] text-[16px] lg:leading-[20px]"
-                >{description}</p>
+                    className="text-[#adadc9] drop-shadow-md font-medium lg:text-[16px] sm:text-[12px] xs:text-[10px] text-[14px] lg:leading-[20px] m-1"
+                >{description.slice(0, 20)}</p>
                     :
                     <p
                         className="text-[#adadc9] drop-shadow-sm font-medium lg:text-[16px] sm:text-[18px] xs:text-[14px] text-[16px] lg:leading-[20px]">No description was provided</p>}

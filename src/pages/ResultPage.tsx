@@ -96,11 +96,11 @@ const ResultPage = () => {
                     <img src={error404} alt='Error 404' />
                 </section>
                 :
-                <section className='grid grid-cols-4 p-4 gap-4 h-[100%] w-[100%] bg-gray-800 back"' style={{ backgroundImage: 'url(../../src/assets/background2.jpg)' }}>
+                <section className='grid w-[100%] p-4 gap-4 bg-gray-800 back xl:grid-cols-4 xs:grid-cols-1 xl:grid-rows-1 xs:grid-rows-4' style={{ backgroundImage: 'url(../../src/assets/background2.jpg)' }}>
                     <div
-                        className='col-span-1 flex flex-col items-center mt-5'>
+                        className='col-span-1 row-span-1 flex flex-col items-center mt-5'>
                         <img src={searchResults?.avatarUrl} alt='User Logo'
-                            className='xl:w-[250px] md:w-1/2 w-1/2 rounded-full m-1 border-4 border-slate-900' />
+                            className='xl:w-[250px] md:w-[200px] w-1/2 rounded-full m-1 border-4 border-slate-900' />
                         <p
                             className='text-[#dfd9ff] font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px] '
                         >{searchResults?.login}</p>
@@ -129,7 +129,7 @@ const ResultPage = () => {
 
                     </div>
                     <div
-                        className='col-span-3 p-3 '>
+                        className='xl:col-span-3 xs:col-span-1 xl:row-span-1 xs:row-span-3 p-3'>
                         <FilterBar setFilter={setFilter} />
                         <Repositories filter={filter} repositories={searchResults?.repositories.nodes} />
                     </div>

@@ -22,7 +22,7 @@ const MainPage = () => {
 
     return (
         <section className='relative flex flex-col items-center justify-evenly h-[100%] w-[100%] bg-gray-800 back"'>
-            <h1 className='font-black text-white lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] flex flex-row'>GitHub Explorer <FiGithub className='ml-3' /></h1>
+            <h1 className='font-black text-white lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] flex flex-row items-center text-center'>GitHub Explorer <FiGithub className='ml-3 ' /></h1>
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
