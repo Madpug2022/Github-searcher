@@ -1,5 +1,5 @@
 import { useState } from 'react'
-
+//Filter input for the repository section.
 interface PropType {
     setFilter: (filter: string) => void
 }

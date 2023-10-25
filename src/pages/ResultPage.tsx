@@ -96,7 +96,7 @@ const ResultPage = () => {
                     <img src={error404} alt='Error 404' />
                 </section>
                 :
-                <section className='grid w-[100%] p-4 gap-4 bg-gray-800 back xl:grid-cols-4 xs:grid-cols-1 xl:grid-rows-1 xs:grid-rows-4' style={{ backgroundImage: 'url(../../src/assets/background2.jpg)' }}>
+                <section data-testid="search-result" className='grid w-[100%] p-4 gap-4 bg-gray-800 back xl:grid-cols-4 xs:grid-cols-1 xl:grid-rows-1 xs:grid-rows-4' style={{ backgroundImage: 'url(../../src/assets/background2.jpg)' }}>
                     <div
                         className='col-span-1 row-span-1 flex flex-col items-center mt-5'>
                         <img src={searchResults?.avatarUrl} alt='User Logo'

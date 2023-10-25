@@ -1,3 +1,5 @@
+/* Fetchdata, sends a Graphql query to github apiv4 and returns the asked data*/
+
 const fetchData = async (query: string) => {
     const token = import.meta.env.VITE_GITHUB_TOKEN;
 
