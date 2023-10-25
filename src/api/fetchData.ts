@@ -1,8 +1,11 @@
 /* Fetchdata, sends a Graphql query to github apiv4 and returns the asked data*/
 
 const fetchData = async (query: string) => {
-    const token = import.meta.env.VITE_GITHUB_TOKEN;
+    let token = import.meta.env.VITE_GITHUB_TOKEN;
 
+    if (!token) {
+        token = process.env.VITE_GITHUB_TOKEN
+    }
     const response = await fetch('https://api.github.com/graphql', {
         method: 'POST',
         headers: {
