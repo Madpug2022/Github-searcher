@@ -1,27 +1,43 @@
-# React + TypeScript + Vite
+# GitHub-Searcher
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Description
 
-Currently, two official plugins are available:
+Welcome to GitHub-Searcher
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This web app allows you to find a Github user and navigate their repository list. It makes a petition using Graphql Github apiV4 <br>
+This projects presents: **HTML, Tailwind, Typescript.** <br>
+Architecture: **Vite + React** <br>
+Libraries: **Tailwind** <br>
 
-## Expanding the ESLint configuration
+Responsivenes: **_This application is completely responsive on small devices_**
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Instalation process
+To install this repository you will require aGitHub token for the petitions. 
+You can follow this guide on how to generate you own token:
 
-- Configure the top-level `parserOptions` property like this:
+https://www.youtube.com/watch?v=9lGcbQR4k4Y
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+1- Clone the above repositorie in your personal computer. <br>
+2- Run npm install yo install dependencies <br>
+3- Create a .env file, a key called VITE_GITHUB_TOKEN and = to tthe token you generated before. <br>
+4- Run npm run dev in terminal to run in development mode in localhost 5173 <br>
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Run tests
+5- You can run some test on the app to check if the petitions are done correctly by running npm run test in the terminal.
+
+### Deployment
+
+You can test the app in vercel! <br>
+
+- [Link to the deployed webpage](https://github-searcher-git-master-madpug2022.vercel.app/)
+
+### Preview
+
+![01](https://github.com/Madpug2022/Github-searcher/assets/98781462/67346c86-5dbd-4c96-976e-6011742e7da5)
+
+
+  ![02](https://github.com/Madpug2022/Github-searcher/assets/98781462/79b87c9e-aca3-4526-a17b-85f52d676e70)
+
+![03](https://github.com/Madpug2022/Github-searcher/assets/98781462/6f8519f1-b758-4d6f-aabb-e3ce70a817d5)
+
+
