@@ -22,6 +22,7 @@ interface User {
 }
 
 interface Repository {
+    id: string;
     name: string;
     description: string | null;
     url: string;
@@ -48,6 +49,7 @@ const ResultPage = () => {
           }
           repositories(first: 20) {
             nodes {
+                id
               name
               description
               url
@@ -65,7 +67,7 @@ const ResultPage = () => {
     }, [])
 
     return (
-        <section className='grid grid-cols-4 p-4 gap-4 h-[100%] w-[100%] bg-gray-800 back"'>
+        <section className='grid grid-cols-4 p-4 gap-4 h-[100%] w-[100%] bg-gray-800 back"' style={{ backgroundImage: 'url(../../src/assets/background2.jpg)' }}>
             <div
                 className='col-span-1 flex flex-col items-center mt-5'>
                 <img src={searchResults?.avatarUrl} alt='User Logo'
