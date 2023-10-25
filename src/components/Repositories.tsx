@@ -42,14 +42,14 @@ const Repositories = (props: PropType) => {
     }, [handleResize]);
     return (<>
         {filteredRepositories.length === 0 ? <section
-            className={`p-3 w-[90%] mt-3 mb-3 h-[${sectionHeight}]  flex flex-col gap-2 overflow-auto`}>
+            className={`p-3 w-[90%]  h-[${sectionHeight}]  flex flex-col gap-2 overflow-auto`}>
             {repositories?.map((repository) => (
                 <RepositoryCard key={repository.id} name={repository.name} description={repository.description} url={repository.url} />
             ))}
         </section>
             :
             <section
-                className={`p-3 w-[90%] mt-3 mb-3 h-[${sectionHeight}]  flex flex-col gap-2 overflow-auto`}>
+                className={`p-3 w-[90%]  h-[${sectionHeight}]  flex flex-col gap-2 overflow-auto`}>
                 {filteredRepositories?.map((repository) => (
                     <RepositoryCard key={repository.id} name={repository.name} description={repository.description} url={repository.url} />
                 ))}

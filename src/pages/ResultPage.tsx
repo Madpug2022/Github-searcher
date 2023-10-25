@@ -129,7 +129,7 @@ const ResultPage = () => {
 
                     </div>
                     <div
-                        className='xl:col-span-3 xs:col-span-1 xl:row-span-1 xs:row-span-3 p-3'>
+                        className='xl:col-span-3 xs:col-span-1 xl:row-span-1 xs:row-span-3 p-3 overflow-scroll'>
                         <FilterBar setFilter={setFilter} />
                         <Repositories filter={filter} repositories={searchResults?.repositories.nodes} />
                     </div>
