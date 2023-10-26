@@ -3,6 +3,7 @@ import { FiGithub } from "react-icons/fi";
 import logo from '../assets/logo.svg'
 import { useState, useRef } from 'react'
 import { useNavigate } from 'react-router-dom';
+import SearchButton from '../components/SearchButton';
 
 const MainPage = () => {
     const [name, setName] = useState('')
@@ -44,10 +45,7 @@ const MainPage = () => {
                             className='bg-tertiary py-4 px-6 placeholder:text-secondary text-black rounded-lg outline-none border-none font-medium'
                         />
                     </label>
-                    <button
-                        type='submit'
-                        className='m-auto mt-3 text-white bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
-                    >Search</button>
+                    <SearchButton />
 
                 </form>
             </motion.div>
